@@ -1,64 +1,64 @@
-ReadID	Type	Position	Region	Detail.1	Detail.2	AAPosition	AADetail.1	AADetail.2
-s8v1-137 (H)	Substitution	30	FR1	C	T	32	Y	I
-s8v1-137 (H)	Substitution	55	FR1	C	G	40	P	V
-s8v1-137 (H)	Substitution	61	FR1	C	G	42	K	Q
-s8v1-137 (H)	Substitution	84	CDR1	A	C	50	I	P
-s8v1-137 (H)	Substitution	89	CDR1	T	A	52	Y	N
-s8v1-137 (H)	Substitution	91	CDR1	G	C	52	Y	N
-s8v1-137 (H)	Substitution	94	CDR1	A	C	53	S	F
-s8v1-137 (H)	Substitution	96	CDR1	T	C	54	G	P
-s8v1-137 (H)	Substitution	137	FR2	G	A	68	I	M
-s8v1-137 (H)	Substitution	147	FR2	T	G	71	D	G
-s8v1-137 (H)	Substitution	156	CDR2	T	A	74	K	*
-s8v1-137 (H)	Substitution	167	CDR2	C	T	78	S	Y
-s8v1-137 (H)	Substitution	227	FR3	C	T	98	L	S
-s8v1-137 (H)	Substitution	242	FR3	G	C	103	X	P
-s8v1-137 (H)	Substitution	247	FR3	G	C	104	X	D
-s8v1-137 (H)	Substitution	284	FR3	T	C	117	X	R
-s8v1-144 (H)	Substitution	41	FR1	T	A	37	R	P
-s8v1-144 (H)	Substitution	96	CDR1	T	C	56	T	H
-s8v1-144 (H)	Substitution	148	FR2	A	C	73	S	S
-s8v1-144 (H)	Substitution	152	CDR2	C	T	74	K	I
-s8v1-144 (H)	Substitution	156	CDR2	T	A	76	Q	N
-s8v1-144 (H)	Substitution	166	CDR2	G	A	79	L	N
-s8v1-144 (H)	Substitution	174	FR3	T	C	82	S	H
-s8v1-144 (H)	Substitution	206	FR3	A	G	92	Y	M
-s8v1-144 (H)	Substitution	210	FR3	G	A	94	C	R
-s8v1-144 (H)	Substitution	211	FR3	T	G	94	C	R
-s8v1-144 (H)	Substitution	241	FR3	A	G	104	X	R
-s8v1-144 (H)	Substitution	275	FR3	G	A	115	X	V
-s8v1-172 (H)	Substitution	5	FR1	G	A	54	G	V
-s8v1-172 (H)	Substitution	84	CDR1	A	C	81	L	L
-s8v1-172 (H)	Substitution	87	CDR1	A	G	82	S	E
-s8v1-172 (H)	Substitution	88	CDR1	G	A	82	S	E
-s8v1-172 (H)	Substitution	89	CDR1	T	G	82	S	E
-s8v1-172 (H)	Substitution	91	CDR1	G	C	83	S	T
-s8v1-172 (H)	Substitution	110	FR2	C	T	89	T	I
-s8v1-172 (H)	Substitution	144	FR2	G	T	101	X	S
-s8v1-172 (H)	Substitution	145	FR2	G	C	101	X	S
-s8v1-172 (H)	Substitution	146	FR2	G	T	101	X	S
-s8v1-172 (H)	Substitution	152	CDR2	C	G	103	X	M
-s8v1-172 (H)	Substitution	154	CDR2	A	T	104	X	F
-s8v1-172 (H)	Substitution	168	CDR2	A	C	109	X	P
-s8v1-172 (H)	Substitution	171	FR3	A	G	110	X	D
-s8v1-172 (H)	Substitution	201	FR3	A	G	120	X	A
-s8v1-172 (H)	Substitution	206	FR3	A	G	121	X	M
-s8v1-172 (H)	Substitution	212	FR3	A	G	123	X	V
-s8v1-172 (H)	Substitution	242	FR3	G	C	133	X	N
-s8v1-172 (H)	Substitution	273	FR3	G	A	144	X	I
-s8v1-172 (H)	Substitution	275	FR3	G	T	144	X	I
-s8v1-172 (H)	Substitution	281	FR3	C	T	146	X	Y
-s8v2-67 (H)	Substitution	91	CDR1	G	A	54	G	*
-s8v2-67 (H)	Substitution	95	CDR1	C	T	56	T	S
-s8v2-67 (H)	Substitution	96	CDR1	T	C	56	T	S
-s8v2-67 (H)	Substitution	98	CDR1	C	T	57	N	L
-s8v2-67 (H)	Substitution	103	FR2	G	C	58	Y	D
-s8v2-67 (H)	Substitution	147	FR2	T	G	73	S	G
-s8v2-67 (H)	Substitution	152	CDR2	C	G	75	N	V
-s8v2-67 (H)	Substitution	156	CDR2	T	A	76	Q	*
-s8v2-67 (H)	Substitution	173	FR3	C	G	82	S	V
-s8v2-67 (H)	Substitution	176	FR3	C	T	83	S	*
-s8v2-67 (H)	Substitution	194	FR3	T	C	89	T	P
-s8v2-67 (H)	Substitution	217	FR3	C	G	96	R	Q
-s8v2-67 (H)	Substitution	233	FR3	C	G	102	X	V
-s8v2-67 (H)	Substitution	259	FR3	C	T	110	X	R
+ReadID        Type           Position   Region   Detail.1   Detail.2   AAPosition   AADetail.1   AADetail.2   
+s8v1-137[H]   Substitution   30         FR1      C          T          32           Y            I            
+s8v1-137[H]   Substitution   55         FR1      C          G          40           P            V            
+s8v1-137[H]   Substitution   61         FR1      C          G          42           K            Q            
+s8v1-137[H]   Substitution   84         CDR1     A          C          50           I            P            
+s8v1-137[H]   Substitution   89         CDR1     T          A          52           Y            N            
+s8v1-137[H]   Substitution   91         CDR1     G          C          52           Y            N            
+s8v1-137[H]   Substitution   94         CDR1     A          C          53           S            F            
+s8v1-137[H]   Substitution   96         CDR1     T          C          54           G            P            
+s8v1-137[H]   Substitution   137        FR2      G          A          68           I            M            
+s8v1-137[H]   Substitution   147        FR2      T          G          71           D            G            
+s8v1-137[H]   Substitution   156        CDR2     T          A          74           K            *            
+s8v1-137[H]   Substitution   167        CDR2     C          T          78           S            Y            
+s8v1-137[H]   Substitution   227        FR3      C          T          98           L            S            
+s8v1-137[H]   Substitution   242        FR3      G          C          103          X            P            
+s8v1-137[H]   Substitution   247        FR3      G          C          104          X            D            
+s8v1-137[H]   Substitution   284        FR3      T          C          117          X            R            
+s8v1-144[H]   Substitution   41         FR1      T          A          37           R            P            
+s8v1-144[H]   Substitution   96         CDR1     T          C          56           T            H            
+s8v1-144[H]   Substitution   148        FR2      A          C          73           S            S            
+s8v1-144[H]   Substitution   152        CDR2     C          T          74           K            I            
+s8v1-144[H]   Substitution   156        CDR2     T          A          76           Q            N            
+s8v1-144[H]   Substitution   166        CDR2     G          A          79           L            N            
+s8v1-144[H]   Substitution   174        FR3      T          C          82           S            H            
+s8v1-144[H]   Substitution   206        FR3      A          G          92           Y            M            
+s8v1-144[H]   Substitution   210        FR3      G          A          94           C            R            
+s8v1-144[H]   Substitution   211        FR3      T          G          94           C            R            
+s8v1-144[H]   Substitution   241        FR3      A          G          104          X            R            
+s8v1-144[H]   Substitution   275        FR3      G          A          115          X            V            
+s8v1-172[H]   Substitution   5          FR1      G          A          54           G            V            
+s8v1-172[H]   Substitution   84         CDR1     A          C          81           L            L            
+s8v1-172[H]   Substitution   87         CDR1     A          G          82           S            E            
+s8v1-172[H]   Substitution   88         CDR1     G          A          82           S            E            
+s8v1-172[H]   Substitution   89         CDR1     T          G          82           S            E            
+s8v1-172[H]   Substitution   91         CDR1     G          C          83           S            T            
+s8v1-172[H]   Substitution   110        FR2      C          T          89           T            I            
+s8v1-172[H]   Substitution   144        FR2      G          T          101          X            S            
+s8v1-172[H]   Substitution   145        FR2      G          C          101          X            S            
+s8v1-172[H]   Substitution   146        FR2      G          T          101          X            S            
+s8v1-172[H]   Substitution   152        CDR2     C          G          103          X            M            
+s8v1-172[H]   Substitution   154        CDR2     A          T          104          X            F            
+s8v1-172[H]   Substitution   168        CDR2     A          C          109          X            P            
+s8v1-172[H]   Substitution   171        FR3      A          G          110          X            D            
+s8v1-172[H]   Substitution   201        FR3      A          G          120          X            A            
+s8v1-172[H]   Substitution   206        FR3      A          G          121          X            M            
+s8v1-172[H]   Substitution   212        FR3      A          G          123          X            V            
+s8v1-172[H]   Substitution   242        FR3      G          C          133          X            N            
+s8v1-172[H]   Substitution   273        FR3      G          A          144          X            I            
+s8v1-172[H]   Substitution   275        FR3      G          T          144          X            I            
+s8v1-172[H]   Substitution   281        FR3      C          T          146          X            Y            
+s8v2-67[H]    Substitution   91         CDR1     G          A          54           G            *            
+s8v2-67[H]    Substitution   95         CDR1     C          T          56           T            S            
+s8v2-67[H]    Substitution   96         CDR1     T          C          56           T            S            
+s8v2-67[H]    Substitution   98         CDR1     C          T          57           N            L            
+s8v2-67[H]    Substitution   103        FR2      G          C          58           Y            D            
+s8v2-67[H]    Substitution   147        FR2      T          G          73           S            G            
+s8v2-67[H]    Substitution   152        CDR2     C          G          75           N            V            
+s8v2-67[H]    Substitution   156        CDR2     T          A          76           Q            *            
+s8v2-67[H]    Substitution   173        FR3      C          G          82           S            V            
+s8v2-67[H]    Substitution   176        FR3      C          T          83           S            *            
+s8v2-67[H]    Substitution   194        FR3      T          C          89           T            P            
+s8v2-67[H]    Substitution   217        FR3      C          G          96           R            Q            
+s8v2-67[H]    Substitution   233        FR3      C          G          102          X            V            
+s8v2-67[H]    Substitution   259        FR3      C          T          110          X            R            

@@ -1,4 +1,4 @@
-#!/home/csun/miniconda3/envs/csun/bin/python
+#!/home/sch-win1/miniconda3/envs/csun/bin/python
 import pandas as pd
 import sys
 
@@ -27,7 +27,7 @@ def txt_formatter(filename):
         temp.append("\n")
         output.append("".join(temp))
 
-    with open(f"{filename}_formatted.txt", "w+") as f:
+    with open(f"{filename}", "w+") as f:
         f.writelines(output)
 
 if __name__ == '__main__':
