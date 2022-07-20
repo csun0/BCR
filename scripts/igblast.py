@@ -9,124 +9,96 @@ import os
 
 
 
-def igblast(dir, member_cutoff=3):
-    if dir[-1] != "/":
-        dir += "/"
+def igblast(dir, CloneIDs=None, member_cutoff=3):
+    if dir[-1] == "/":
+        dir = dir[:-1]
 
-    df = pd.read_csv(f"{dir}Clones.txt", sep="\s+")
-    subset = df[df["#Members"] >= member_cutoff]
-    CloneIDs = subset["CloneID"].tolist()
+    if not CloneIDs:
+        for path, subdirs, files in os.walk(dir):
+            for file in files:
+                if file == "Clones.txt":
+                    fullpath = os.path.join(path, file)
+                    df = pd.read_csv(fullpath, sep="\s+")
+                    subset = df[df["#Members"] >= member_cutoff]
+                    CloneIDs = subset["CloneID"].tolist()
+    try:
+        os.mkdir(f"{dir}/clone_{clone_id}/auxiliary")
+    except:
+        pass
 
     for clone_id in CloneIDs:
-        print(f"Searching clone group {clone_id}...")
-        with open(f"{dir}clone_{clone_id}/igblast_output.txt", 'w+') as f:
-            f.write(f"-------------------- Group {clone_id} --------------------\n")
-            pwd = f"{os.getcwd()}/{dir}clone_{clone_id}/heavy_nt.fas"
-            cmd = f"bin/igblastn -germline_db_V database/IGV -germline_db_J database/IGJ -germline_db_D database/IGD -organism human -query {pwd} -show_translation"
-            output = subprocess.run(cmd, shell=True, capture_output=True, text=True, cwd=f"{pathlib.Path.home()}/igblast/")
-            sequences = ["Query=" + _ for _ in output.stdout.split("Query=")][1:]
+        print(f"Blasting clone group {clone_id}...")
 
-            for chunk in sequences:
-                id = re.findall("Query= ([a-zA-Z0-9-_]+)",chunk)[0]
-                id_len = len(id)
-                genes = re.findall("Value([\S\s]+)Domain", chunk)[0]
-                genes = genes.split("\n")
-                genes = [_ for _ in genes if _ != '']
-                genes = [_.split() for _ in genes]
-                df = pd.DataFrame(genes)
+        # Clear files
+        with open(f"{dir}/clone_{clone_id}/igblast.report", 'w+'): pass
+        # with open(f"{dir}/clone_{clone_id}/auxiliary/igblast_full.report", "w+"): 
+        #     pass
+        
+        with open(f"{dir}/clone_{clone_id}/igblast.report", 'a+') as f:
+            for type in ['heavy', 'light']:
+                f.write(f"{'-'*30} Group {clone_id} ({type}) {'-'*30}\n\n")
+
+                seq_path = f"{os.getcwd()}/{dir}/clone_{clone_id}/{type}_na.fna"
+                cmd = f"bin/igblastn -germline_db_V database/IGV -germline_db_J database/IGJ -germline_db_D database/IGD -organism human -query {seq_path} -show_translation"
+                output = subprocess.run(cmd, shell=True, capture_output=True, text=True, cwd=f"{pathlib.Path.home()}/igblast/")
                 
-                v_names = []
-                d_names = []
-                j_names = []
+                sequences = ["Query=" + _ for _ in output.stdout.split("Query=")][1:]
+                df_genes = pd.DataFrame()
+                ids = []
 
-                v_prob = []
-                d_prob = []
-                j_prob = []
+                for chunk in sequences:
+                    genes = re.findall("Value([\S\s]+)Domain", chunk)[0]
+                    genes = genes.split("\n")
+                    genes = [_ for _ in genes if _ != '']
+                    genes = [_.split() for _ in genes]
+                    df = pd.DataFrame(genes)
 
-                temp = df.to_numpy()
-                for count, line in enumerate(temp):
-                    if "V" in line[0]:
-                        v_names.append(temp[count][0])
-                        v_prob.append(temp[count][2])
-                    elif "D" in line[0]:
-                        d_names.append(temp[count][0])
-                        d_prob.append(temp[count][2])
-                    else:
-                        j_names.append(temp[count][0])
-                        j_prob.append(temp[count][2])
+                    id = re.findall("Query= ([a-zA-Z0-9-_]+)",chunk)[0]
+                    ids.append(id)
+                    df['id'] = id
+                    df['id_len'] = len(id)
+                    df_genes = pd.concat([df_genes,df])
 
-                first = re.findall("(.+)\*", v_names[0])
-                if re.findall("(.+)\*", v_names[1]) == first: 
-                    v_names[1] = v_names[1].replace(first[0], "")
-                    if re.findall("(.+)\*", v_names[2]) == first:
-                        v_names[2] = v_names[2].replace(first[0], "")
+                df_genes['VDJ'] = [re.findall("IG.(.)",_)[0] for _ in df_genes[0].tolist()]
+                df_genes['HKL'] = [re.findall("IG(.).",_)[0] for _ in df_genes[0].tolist()]
+                df_genes['gene'] = [re.findall("IG..(.+)",_)[0] for _ in df_genes[0].tolist()]
+                cond = [True if float(_) > 1 else False for _ in df_genes[2].tolist()]
+                df_genes['gene'] = [f"({gene})" if yn else gene for yn, gene in zip(cond, df_genes['gene'].tolist())]
+                df_genes['gene_len'] = [len(_) for _ in df_genes['gene'].tolist()]
+                df_genes['e_len'] = [len(_) for _ in df_genes[2].tolist()]
 
-                v_names = re.sub('[IGHVDJ\[\]\'\",]', "", str(v_names))
-                v_prob = re.sub('[IGHVDJ\[\]\'\",]', "", str(v_prob))
+                gene_len = df_genes['gene_len'].max()
+                id_len = df_genes['id_len'].max()
+                e_len = df_genes['e_len'].max()
 
-                first = re.findall("(.+)\*", d_names[0])
-                if re.findall("(.+)\*", d_names[1]) == first: 
-                    d_names[1] = d_names[1].replace(first[0], "")
-                    if re.findall("(.+)\*", d_names[2]) == first:
-                        d_names[2] = d_names[2].replace(first[0], "")
+                for id in ids:
+                    df_subset = df_genes[df_genes['id'] == id]
+                    hkl = df_subset['HKL'].tolist()[0]
 
-                d_names = re.sub('[IGHVDJ\[\]\'\",]', "", str(d_names))
-                d_prob = re.sub('[IGHVDJ\[\]\'\",]', "", str(d_prob))
+                    f.write(f"{id:<{id_len}}     {'Gene':<{gene_len*3+4}}     E-value\n")
+                    for gene in ['V', 'D', 'J']:
+                        df = df_subset[df_subset['VDJ'] == gene]
+                        genes = df['gene'].tolist()
+                        for i in range(3 - len(genes)):
+                            genes.append("--")
+                        g1, g2, g3 = genes
 
-                first = re.findall("(.+)\*", j_names[0])
-                if re.findall("(.+)\*", j_names[1]) == first: 
-                    j_names[1] = j_names[1].replace(first[0], "")
-                    if re.findall("(.+)\*", j_names[2]) == first:
-                        j_names[2] = j_names[2].replace(first[0], "")
+                        e = df[2].tolist()
+                        for i in range(3 - len(e)):
+                            e.append("--")
+                        e1, e2, e3 = e
 
-                j_names = re.sub('[IGHVDJ\[\]\'\",]', "", str(j_names))
-                j_prob = re.sub('[IGHVDJ\[\]\'\",]', "", str(j_prob))
+                        f.write(f"{'IG'+hkl+gene:<{id_len}}  |  {g1:<{gene_len}}  {g2:<{gene_len}}  {g3:<{gene_len}}  |  {e1:>{e_len}}  {e2:>{e_len}}  {e3:>{e_len}}\n")
+                    f.write("\n")
 
+                with open(f"{dir}/clone_{clone_id}/auxiliary/igblast_full.report", "a+") as a:
+                    a.write(output.stdout)
+
+            f.write(f"{'-'*30}-{'-'*5}-{'-'*len(str(clone_id))}--{'-'*len(type)}--{'-'*30}\n\n")
+
+            
+            
                 
-
-                def empty_blast(e, names):
-                    present = int(re.findall("\d.+(\d)",str(e))[0])
-                    a = names.split()
-                    for i in range(3-present):
-                        a.append("")
-                    return a
-
-                try: v1, v2, v3 = v_names.split()
-                except ValueError as e: v1, v2, v3 = empty_blast(e, v_names)
-                try: d1, d2, d3 = d_names.split()
-                except ValueError as e: d1, d2, d3 = empty_blast(e, d_names)
-                try: j1, j2, j3 = j_names.split()
-                except ValueError as e: j1, j2, j3 = empty_blast(e, j_names)
-
-                # v_len = [len(_) for _ in v_names.split()]
-                # d_len = [len(_) for _ in d_names.split()]
-                # j_len = [len(_) for _ in j_names.split()]
-                # lens = np.array([v_len, d_len, j_len])
-                lens = np.array([[v1,v2,v3], [d1,d2,d3], [j1,j2,j3]])
-                nplen = np.vectorize(len)
-                lens = np.amax(np.array(list(map(nplen, lens))),0)
-
-
-                v_len = [len(_) for _ in v_prob.split()]
-                d_len = [len(_) for _ in d_prob.split()]
-                j_len = [len(_) for _ in j_prob.split()]
-                lens_prob = np.array([v_len, d_len, j_len])
-                lens_prob = np.amax(lens_prob, 0)
-
-                try: v1_prob, v2_prob, v3_prob = v_prob.split()
-                except ValueError as e: v1_prob, v2_prob, v3_prob = empty_blast(e, v_prob)
-                try: d1_prob, d2_prob, d3_prob = d_prob.split()
-                except ValueError as e: d1_prob, d2_prob, d3_prob = empty_blast(e, d_prob)
-                try: j1_prob, j2_prob, j3_prob = j_prob.split()
-                except ValueError as e: j1_prob, j2_prob, j3_prob = empty_blast(e, j_prob)
-
-                f.write(f"{id}     {'Match':<{6+lens.sum()}}   E-value\n")
-                f.write(f"{'IGHV':<{id_len}}  |  {v1:<{lens[0]}}  {v2:<{lens[1]}}  {v3:<{lens[2]}}  |  {v1_prob:<{lens_prob[0]}}  {v2_prob:<{lens_prob[1]}}  {v3_prob:<{lens_prob[2]}}\n")
-                f.write(f"{'IGHD':<{id_len}}  |  {d1:<{lens[0]}}  {d2:<{lens[1]}}  {d3:<{lens[2]}}  |  {d1_prob:<{lens_prob[0]}}  {d2_prob:<{lens_prob[1]}}  {d3_prob:<{lens_prob[2]}}\n")
-                f.write(f"{'IGHJ':<{id_len}}  |  {j1:<{lens[0]}}  {j2:<{lens[1]}}  {j3:<{lens[2]}}  |  {j1_prob:<{lens_prob[0]}}  {j2_prob:<{lens_prob[1]}}  {j3_prob:<{lens_prob[2]}}\n\n")
-
-
-
 
 if __name__ == '__main__':
     igblast(sys.argv[1])

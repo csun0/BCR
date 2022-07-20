@@ -1,0 +1,80 @@
+>2-40k
+gaaattgtgttgacgcagtctccaggc
+  E  I  V  L  T  Q  S  P  G 
+accctgtctttgtctccaggggaaagagccaccctctcctgcagggccagtcagggtgtt
+  T  L  S  L  S  P  G  E  R  A  T  L  S  C  R  A  S  Q  G  V 
+gatgacagcttctttgcctggtaccagcagagagctggccaggctcccaggctcctcatc
+  D  D  S  F  F  A  W  Y  Q  Q  R  A  G  Q  A  P  R  L  L  I 
+tatggtgcatccagcagggccactggcatcccggacagattcagtggcggtgggtctggg
+  Y  G  A  S  S  R  A  T  G  I  P  D  R  F  S  G  G  G  S  G 
+acagacttcactctcaccatcagcagactggagcctgaagattttgcagtgtattactgt
+  T  D  F  T  L  T  I  S  R  L  E  P  E  D  F  A  V  Y  Y  C 
+cagcactatgatggttcactcactttcggcggagggaccaaggtggagatcaaa
+  Q  H  Y  D  G  S  L  T  F  G  G  G  T  K  V  E  I  K
+
+
+>1-144k
+gaaattgtgttgacacagtctcca
+  E  I  V  L  T  Q  S  P 
+gccaccctgtctttgtctccaggggaaagggccaccctctcctgcagggccagtcagagt
+  A  T  L  S  L  S  P  G  E  R  A  T  L  S  C  R  A  S  Q  S 
+gttagcggctacttagcctggtaccaacagagacctggccaggctcccaggctcctcatc
+  V  S  G  Y  L  A  W  Y  Q  Q  R  P  G  Q  A  P  R  L  L  I 
+tatgatgtatccaacagggccactggcatcccagccaggttcagtggcagtgggtctggg
+  Y  D  V  S  N  R  A  T  G  I  P  A  R  F  S  G  S  G  S  G 
+acagacttcactctcaccatcagcagcctagagcctgaagattttgcagtttattactgt
+  T  D  F  T  L  T  I  S  S  L  E  P  E  D  F  A  V  Y  Y  C 
+cagcacggaagcacctggcccactttcggcggaggaaccaaggtggagatcaaa
+  Q  H  G  S  T  W  P  T  F  G  G  G  T  K  V  E  I  K
+
+>1-137k
+gaaattgtcttgacacag
+  E  I  V  L  T  Q 
+tcgccagccaccctgtctttgtctccaggggaaagagccaccctctcctgcagggccagt
+  S  P  A  T  L  S  L  S  P  G  E  R  A  T  L  S  C  R  A  S 
+cagagtgttagtacctacttagcctggtaccaacagaaacctggccaggctcccaggctc
+  Q  S  V  S  T  Y  L  A  W  Y  Q  Q  K  P  G  Q  A  P  R  L 
+ctcatctttgatgcatccagaagggccactggcatcccagccaggttcagtggcagtggg
+  L  I  F  D  A  S  R  R  A  T  G  I  P  A  R  F  S  G  S  G 
+tctgggacagacttcactctcaccatcagtagcctagagcctgaagattttgcagtttat
+  S  G  T  D  F  T  L  T  I  S  S  L  E  P  E  D  F  A  V  Y 
+tactgtcagcaggatagcaactggctcactttcggcggagggacccaggtggacatcaaa
+  Y  C  Q  Q  D  S  N  W  L  T  F  G  G  G  T  Q  V  D  I  K 
+
+
+
+
+
+
+
+
+
+>1-172k
+gaaattgtgttgacacagtctccagcc
+  E  I  V  L  T  Q  S  P  A 
+accctgtctttgtctccaggggaaagagccaccctctcctgcagggccagtcagagtgtt
+  T  L  S  L  S  P  G  E  R  A  T  L  S  C  R  A  S  Q  S  V 
+agcaccgacttagcctggtaccaacagaaacctggccaggctcccaggctcctcatctat
+  S  T  D  L  A  W  Y  Q  Q  K  P  G  Q  A  P  R  L  L  I  Y 
+gatgcaatctccagggccagtggcatcccagacaggttcagtggcagtgggtctgggaca
+  D  A  I  S  R  A  S  G  I  P  D  R  F  S  G  S  G  S  G  T 
+gacttcactctcaccatcagcagcctagagcctgaagactttgcagtttattactgtcag
+  D  F  T  L  T  I  S  S  L  E  P  E  D  F  A  V  Y  Y  C  Q 
+caccgtagtacctgggtcactttcggcggagggaccaaggtggagatcaa
+ H  R  S  T  W  V  T  F  G  G  G  T  K  V  E  I  K
+
+>2-67k
+gaaattgtgttgacacagtcccca
+  E  I  V  L  T  Q  S  P 
+gccaccctgtctttgtctccaggggaaagagccaccctctcctgcagggccagtcagagt
+  A  T  L  S  L  S  P  G  E  R  A  T  L  S  C  R  A  S  Q  S 
+gttagcaccgacttagcctggtaccaacagaaacctggccaggctcccaggctcctcatc
+  V  S  T  D  L  A  W  Y  Q  Q  K  P  G  Q  A  P  R  L  L  I 
+tatgatgcaatctccagggccagtggcatcccagacaggttcagtggcagtgggtctggg
+  Y  D  A  I  S  R  A  S  G  I  P  D  R  F  S  G  S  G  S  G 
+acagacttcactctcaccatcagcagcctagagcctgaagactttgcagtttattactgt
+  T  D  F  T  L  T  I  S  S  L  E  P  E  D  F  A  V  Y  Y  C 
+cagcaccgtagtacctgggtcactttcggcggagggaccaaggtggagatcaaa
+  Q  H  R  S  T  W  V  T  F  G  G  G  T  K  V  E  I  K
+
+
