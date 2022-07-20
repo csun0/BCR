@@ -21,18 +21,19 @@ def igblast(dir, CloneIDs=None, member_cutoff=3):
                     df = pd.read_csv(fullpath, sep="\s+")
                     subset = df[df["#Members"] >= member_cutoff]
                     CloneIDs = subset["CloneID"].tolist()
-    try:
-        os.mkdir(f"{dir}/clone_{clone_id}/auxiliary")
-    except:
-        pass
 
     for clone_id in CloneIDs:
         print(f"Blasting clone group {clone_id}...")
 
+        try:
+            os.mkdir(f"{dir}/clone_{clone_id}/auxiliary")
+        except:
+            pass
+
         # Clear files
         with open(f"{dir}/clone_{clone_id}/igblast.report", 'w+'): pass
-        # with open(f"{dir}/clone_{clone_id}/auxiliary/igblast_full.report", "w+"): 
-        #     pass
+        
+        with open(f"{dir}/clone_{clone_id}/auxiliary/igblast_full.report", "w+"): pass
         
         with open(f"{dir}/clone_{clone_id}/igblast.report", 'a+') as f:
             for type in ['heavy', 'light']:

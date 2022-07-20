@@ -65,7 +65,7 @@ def expasy(dir, CloneIDs=None, member_cutoff=3):
                     if match:
                         found_match = True
                         pre, post = re.findall(f"(.+){fragment_aa}(.+)", full_aa)[0]
-                        aa.append([id, pre, fragment_aa, post, count, full])
+                        aa.append([id, pre, fragment_aa, post, count, seq])
             if not found_match:
                 aa.append([id, "No W-end CDR3 pattern found."])
 
@@ -90,8 +90,8 @@ def expasy(dir, CloneIDs=None, member_cutoff=3):
                 na_wrap = textwrap.wrap(na, 60)
                 aa_wrap = textwrap.wrap(aa, 20)
                 for a, b in zip(na_wrap, aa_wrap):
-                    f.write(f"{na_wrap}\n")
-                    f.write(f"{aa_wrap}\n")
+                    f.write(f"{a}\n")
+                    f.write(f"{b}\n")
 
 if __name__ == '__main__':
     expasy(sys.argv[1])
