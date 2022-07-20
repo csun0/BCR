@@ -84,14 +84,15 @@ def expasy(dir, CloneIDs=None, member_cutoff=3):
 
         with open(f"{dir}/clone_{clone_id}/heavy_mixed.txt", 'w+') as f:
             for index, row in df.iterrows():
-                f.write(f"{row[0]}\n")
-                na = "".join(row[5])[row[4]:]
-                aa = "".join(row[1:4])
-                na_wrap = textwrap.wrap(na, 60)
-                aa_wrap = textwrap.wrap(aa, 20)
-                for a, b in zip(na_wrap, aa_wrap):
-                    f.write(f"{a}\n")
-                    f.write(f"{b}\n")
-
+                f.write(f"{row[0]}")
+                if row[4] in [3,4,5]:
+                    na = row[5][row[4]-3:]
+                    aa = "".join(row[1:4])
+                    na_wrap = textwrap.wrap(na, 60)
+                    aa_wrap = textwrap.wrap(aa, 20)
+                    for a, b in zip(na_wrap, aa_wrap):
+                        f.write(f"{a}\n")
+                        f.write(f"{''.join([f' {i} ' for i in b])}\n")
+                f.write(f"\n")
 if __name__ == '__main__':
     expasy(sys.argv[1])

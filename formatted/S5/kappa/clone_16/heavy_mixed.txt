@@ -1,0 +1,78 @@
+>s5v2-29
+ctttatgcttccggctcgtatgttgtgtggaattgtgagcggataacaattcacacagga
+ L  Y  A  S  G  S  Y  V  V  W  N  C  E  R  I  T  I  H  T  G 
+aacagctatgaccatgattacgccaagctcagaattaaccctcactaaagggactagtcc
+ N  S  Y  D  H  D  Y  A  K  L  R  I  N  P  H  -  R  D  -  S 
+tgcaggtttaaacgaattcgcccttctgcaaccggtgtacattcccaggtgcagctgcaa
+ C  R  F  K  R  I  R  P  S  A  T  G  V  H  S  Q  V  Q  L  Q 
+gagtcgggcccaggactggtgaagccttcggagaccctgtccctcacctgcactgtctct
+ E  S  G  P  G  L  V  K  P  S  E  T  L  S  L  T  C  T  V  S 
+ggtggctccgtcagcagtaatatttactattggagctggatccggcagaccccaggaaag
+ G  G  S  V  S  S  N  I  Y  Y  W  S  W  I  R  Q  T  P  G  K 
+ggactggagtggcttggttatttttatcacagtggcagcagcaactacaacccctccctg
+ G  L  E  W  L  G  Y  F  Y  H  S  G  S  S  N  Y  N  P  S  L 
+aagagtcgagtcaccatatcaggagacatgtccaagaaccagttctccctgaagttgaag
+ K  S  R  V  T  I  S  G  D  M  S  K  N  Q  F  S  L  K  L  K 
+tctgtgaccgctgcggacacggccatctattactgtgcgagagggggtgttgagaatctt
+ S  V  T  A  A  D  T  A  I  Y  Y  C  A  R  G  G  V  E  N  L 
+atgctggtggctgttattcaagagatgtggtacttcgatctctggggccgtggcaccctg
+ M  L  V  A  V  I  Q  E  M  W  Y  F  D  L  W  G  R  G  T  L 
+gtcactgtctcctcagcctccaccaagggcccatcggtcttccccctggcaccctcctcc
+ V  T  V  S  S  A  S  T  K  G  P  S  V  F  P  L  A  P  S  S 
+aagagcacctctgggggcacagcggccctgggctgcctggtcaaggactacttccccgaa
+ K  S  T  S  G  G  T  A  A  L  G  C  L  V  K  D  Y  F  P  E 
+ccggtgacggtgtcgtggaactcaggcgccctgaccagctgcacctgggaatgtacaccg
+ P  V  T  V  S  W  N  S  G  A  L  T  S  C  T  W  E  C  T  P 
+gttgcagaagggcgaattcgcggccgctaaattcaattcgccctatagtagtcgtaacc
+ V  A  E  G  R  I  R  G  R  -  I  Q  F  A  L  -  -  S  - 
+
+>s5v1-15
+aacagctatgaccatgattacgccaagctcagaattaaccctcactaaagggastagtcc
+ N  S  Y  D  H  D  Y  A  K  L  R  I  N  P  H  -  R  X  -  S 
+wgcaggyttaarcgaattcgcccttctgcaaccggtgtacattcccaggtgcagctgcag
+ X  R  X  X  R  I  R  P  S  A  T  G  V  H  S  Q  V  Q  L  Q 
+gagtcgggcccaggactggtgaagccttcggagaccctgtccctcacctgcactgtctct
+ E  S  G  P  G  L  V  K  P  S  E  T  L  S  L  T  C  T  V  S 
+ggtggctccgtcagtagtaatctttactactggagctggatccggcagaccccagggaag
+ G  G  S  V  S  S  N  L  Y  Y  W  S  W  I  R  Q  T  P  G  K 
+ggactggagtggattggatatttttattacagtgggagcagcaactacaatccctccctg
+ G  L  E  W  I  G  Y  F  Y  Y  S  G  S  S  N  Y  N  P  S  L 
+aagagtcgagtcaccatatcaggagacacgtccaagaaccagttctccctgaagttgacc
+ K  S  R  V  T  I  S  G  D  T  S  K  N  Q  F  S  L  K  L  T 
+tctgtgaccgctgcggacacggccatctattactgtgcgagagggggtgttgagaatctt
+ S  V  T  A  A  D  T  A  I  Y  Y  C  A  R  G  G  V  E  N  L 
+gtgctgctgactgttactcaagagatctggtacttcgatctctggggccgtggcaccctg
+ V  L  L  T  V  T  Q  E  I  W  Y  F  D  L  W  G  R  G  T  L 
+gtcactgtctcctcagcctccaccaagggcccatcggtcttccccctggcaccctcctcc
+ V  T  V  S  S  A  S  T  K  G  P  S  V  F  P  L  A  P  S  S 
+aagagcacctctgggggcacagcggccctgggctgcctggtcaaggactacttccccgaa
+ K  S  T  S  G  G  T  A  A  L  G  C  L  V  K  D  Y  F  P  E 
+ccggtgacggtgtcgtggaactcaggcgccctgaccagcggctgcacctcggaatgtaca
+ P  V  T  V  S  W  N  S  G  A  L  T  S  G  C  T  S  E  C  T 
+ccggttgcagaagggcgaattcgcggccgctaaattcaattcgccctatakagtctgca
+ P  V  A  E  G  R  I  R  G  R  -  I  Q  F  A  L  X  S  L 
+
+>s5v2-52
+agggactagtcctgcaggtttaaacgaattcgcccttctgcaaccggtgtacattcccag
+ R  D  -  S  C  R  F  K  R  I  R  P  S  A  T  G  V  H  S  Q 
+gtgcagctgcaggagtcgggcccaggactggtgaagccttcggagaccctgtccctcacc
+ V  Q  L  Q  E  S  G  P  G  L  V  K  P  S  E  T  L  S  L  T 
+tgcactgtctctggtgactccgtcaacaataaaatttattactggagctggatccggcag
+ C  T  V  S  G  D  S  V  N  N  K  I  Y  Y  W  S  W  I  R  Q 
+accgcagggaggggactggagtggattgggtctctgtctgccagtgggagcagcaactac
+ T  A  G  R  G  L  E  W  I  G  S  L  S  A  S  G  S  S  N  Y 
+aacccctccctcaagagtcgagtcaccatattactacacacgtccgagaaccagttctcc
+ N  P  S  L  K  S  R  V  T  I  L  L  H  T  S  E  N  Q  F  S 
+ctgaagttgacctctgtgaccgctgcagacacggccgtcttttactgtgcgagagggggt
+ L  K  L  T  S  V  T  A  A  D  T  A  V  F  Y  C  A  R  G  G 
+attgaggatcttttcctggggacttctaatcaacggatctggtacttcgatgtctggggc
+ I  E  D  L  F  L  G  T  S  N  Q  R  I  W  Y  F  D  V  W  G 
+cgtggcacccaagtcactgtctcctcagcctccaccaagggcccatcggtcttccccctg
+ R  G  T  Q  V  T  V  S  S  A  S  T  K  G  P  S  V  F  P  L 
+gcaccctcctccaagagcacctctgggggcacagcggccctgggctgcctggtcaaggac
+ A  P  S  S  K  S  T  S  G  G  T  A  A  L  G  C  L  V  K  D 
+tacttccccgaaccggtgacggtgtcgtggaactcaggcgccctgaccagctgcacctca
+ Y  F  P  E  P  V  T  V  S  W  N  S  G  A  L  T  S  C  T  S 
+gaatgtaaagggcgaattcgcggccgctaaattcrattcgccctatagkakcgagcgc
+ E  C  K  G  R  I  R  G  R  -  I  X  F  A  L  -  X  R  A 
+
